@@ -201,14 +201,13 @@ public class AuctionListener extends ZUtils implements Listener {
 	 * @return the string with the placeholders replaced
 	 */
 	private String replaceString(String string, AuctionItem auctionItem) {
-
 		string = string.replace("%seller%", auctionItem.getSeller().getName());
 
 		if (auctionItem.getBuyerUniqueId() != null) {
 			string = string.replace("%buyer%", auctionItem.getBuyer().getName());
 		}
 
-		string = string.replace("%price%", auctionItem.priceFormat());
+		string = string.replace("%price%", stripExtrasCode(auctionItem.priceFormat(), Config.removeExtrasCode));
 
 		switch (auctionItem.getType()) {
 		case DEFAULT:

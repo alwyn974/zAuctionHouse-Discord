@@ -50,13 +50,13 @@ public class Config implements Saveable {
 
         final EmbedField enchantEmbed = new EmbedField("Enchantment", "Item enchantment: **%enchant%**", false, false);
         actions.put(ActionType.SALE, new Action("none", "zAuctionHouse", new Color(255, 0, 0),
-                Arrays.asList(new EmbedField("Sale", "Player **%seller%** just added x%amount% %material% for **%price%%currency%**", false), enchantEmbed))
+                Arrays.asList(new EmbedField("Sale", "Player **%seller%** just added x%amount% %material% for **%price%**", false), enchantEmbed))
         );
         actions.put(ActionType.BOUGHT, new Action("none", "zAuctionHouse", new Color(0, 255, 0),
-                Arrays.asList(new EmbedField("Item bought !", "Player **%buyer%** bought x%amount% %material% for **%price%%currency%** of **%seller%**", false), enchantEmbed))
+                Arrays.asList(new EmbedField("Item bought !", "Player **%buyer%** bought x%amount% %material% for **%price%** of **%seller%**", false), enchantEmbed))
         );
         actions.put(ActionType.RETRIEVED, new Action("none", "zAuctionHouse", new Color(0, 255, 0),
-                Arrays.asList(new EmbedField("Item retrieved !", "Player **%seller%** retrieved x%amount% %material% for **%price%%currency%**", false), enchantEmbed))
+                Arrays.asList(new EmbedField("Item retrieved !", "Player **%seller%** retrieved x%amount% %material% for **%price%**", false), enchantEmbed))
         );
         actions.put(ActionType.ADMIN_REMOVED, new Action("none", "zAuctionHouse", new Color(0, 255, 0),
                 Arrays.asList(new EmbedField("Item removed by admin !", "Admin removed x%amount% %material% of **%seller%**", false), enchantEmbed))
